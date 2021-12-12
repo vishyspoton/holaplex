@@ -208,13 +208,12 @@ export default function BulkUploadWizard() {
 
   const uploadMetaData = async (nftValue: NFTValue) => {
     const creators = nftValue.properties.creators as Creator[];
-    const creatorArrayWithHolaplexLast = [...creators, HOLAPLEX_CREATOR_OBJECT];
 
     const nftWithHolaplexAsLastCreator: NFTValue = {
       ...nftValue,
       properties: {
         ...nftValue.properties,
-        creators: creatorArrayWithHolaplexLast,
+        creators,
       },
     };
 

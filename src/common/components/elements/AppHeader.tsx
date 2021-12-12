@@ -1,12 +1,13 @@
-import sv from '@/constants/styles';
-import Link from 'next/link';
-import styled from 'styled-components';
 import { Layout, Space } from 'antd';
-import useWindowDimensions from '@/hooks/useWindowDimensions';
+
+import Link from 'next/link';
 import SocialLinks from '@/components/elements/SocialLinks';
-import { useRouter } from 'next/router';
 import { WalletContext } from '@/modules/wallet';
+import styled from 'styled-components';
+import sv from '@/constants/styles';
 import { useContext } from 'react';
+import { useRouter } from 'next/router';
+import useWindowDimensions from '@/hooks/useWindowDimensions';
 
 const HeaderTitle = styled.div`
   font-size: 24px;
@@ -52,7 +53,7 @@ export function AppHeader() {
         )}
       </HeaderTitle>
       <Space size="large">
-        {windowDimensions.width >= 778 && (
+        {/* {windowDimensions.width >= 778 && (
           <HeaderLinkWrapper
             onClick={() => connect()}
             active={router.pathname == '/storefront/edit'}
@@ -61,14 +62,14 @@ export function AppHeader() {
               Edit store
             </Link>
           </HeaderLinkWrapper>
-        )}
+        )} */}
 
         <HeaderLinkWrapper active={router.pathname == '/nfts/new'}>
           <Link href="/nfts/new" passHref>
             Mint NFTs
           </Link>
         </HeaderLinkWrapper>
-        <HeaderLinkWrapper active={router.pathname == '/about'}>
+        {/* <HeaderLinkWrapper active={router.pathname == '/about'}>
           <Link href="/about" passHref>
             About
           </Link>
@@ -77,8 +78,8 @@ export function AppHeader() {
           <a href="https://holaplex-support.zendesk.com/hc/en-us" target="_blank" rel="noreferrer">
             FAQ
           </a>
-        </HeaderLinkWrapper>
-        {windowDimensions.width > 550 && <SocialLinks />}
+        </HeaderLinkWrapper> */}
+        {/* {windowDimensions.width > 550 && <SocialLinks />} */}
       </Space>
     </StyledHeader>
   );

@@ -1,18 +1,20 @@
-import React, { useEffect } from 'react';
-import type { AppProps } from 'next/app';
 import 'react-toastify/dist/ReactToastify.css';
 import '@/styles/globals.css';
-import { useRouter } from 'next/router';
-import { ToastContainer } from 'react-toastify';
-import Head from 'next/head';
-import styled from 'styled-components';
-import { Layout, Col, Row } from 'antd';
-import { isNil } from 'ramda';
-import Loading from '@/components/elements/Loading';
-import { WalletProvider } from '@/modules/wallet';
-import { StorefrontProvider } from '@/modules/storefront';
-import SocialLinks from '@/components/elements/SocialLinks';
+
+import { Col, Layout, Row } from 'antd';
+import React, { useEffect } from 'react';
+
 import { AppHeader } from '@/common/components/elements/AppHeader';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import Loading from '@/components/elements/Loading';
+import SocialLinks from '@/components/elements/SocialLinks';
+import { StorefrontProvider } from '@/modules/storefront';
+import { ToastContainer } from 'react-toastify';
+import { WalletProvider } from '@/modules/wallet';
+import { isNil } from 'ramda';
+import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
 const GOOGLE_ANALYTICS_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
 
@@ -84,7 +86,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                           <Col span={24}>
                             <Row>
                               <Col xs={24} md={8}>
-                                <a href="mailto:hola@holaplex.com">hola@holaplex.com</a>
+                                {/* <a href="mailto:hola@holaplex.com">hola@holaplex.com</a> */}
                               </Col>
                               <Col xs={0} md={8}>
                                 <Row justify="center">
@@ -100,7 +102,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                               </Col>
                               <Col xs={0} md={8}>
                                 <Row justify="end">
-                                  <SocialLinks />
+                                  {/* <SocialLinks /> */}
                                 </Row>
                               </Col>
                             </Row>
