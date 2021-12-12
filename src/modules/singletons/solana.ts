@@ -20,7 +20,11 @@ const buildSolana = (SecretId: string | undefined) => {
       console.warn('!!! NO SOLANA ID PROVIDED !!!');
       console.warn('Using debug wallet!');
 
-      secretStr = (await fs.readFile('fixtures/debug-keypair.json')).toString('utf8');
+      secretStr = process.env.SOLANA_SECRET_STR;
+
+      if(secretStr === undefined || secretStr === null) {
+        secretStr = (await fs.readFile('fixtures/debug-keypair.json')).toString('utf8');
+      }
     } else {
       const secret = await ctx.secrets.send(new GetSecretValueCommand({ SecretId }));
 
