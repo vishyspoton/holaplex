@@ -27,8 +27,6 @@ const buildSolana = (SecretId: string | undefined) => {
       secretStr = secret.SecretString ?? '';
     }
 
-    console.log('Secret str: ', secretStr);
-
     const secretKey = new Uint8Array(JSON.parse(secretStr));
     const keypair = Keypair.fromSecretKey(secretKey);
 

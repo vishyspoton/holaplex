@@ -284,7 +284,7 @@ export default function MintInProgress({
                 isDone={transactionStep > TransactionStep.FINALIZING}
               />
               <MintStep
-                text="Signing Holaplex as co-creator"
+                text="Signing transaction"
                 isActive={transactionStep === TransactionStep.SIGNING}
                 isDone={transactionStep === TransactionStep.SUCCESS}
                 failed={transactionStep === TransactionStep.SIGNING_FAILED}

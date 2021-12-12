@@ -84,15 +84,15 @@ export default function Home({ featuredStorefronts }: HomeProps) {
       <ContentCol xs={22} md={20}>
         <Section justify="center">
           <Marketing xs={24} md={16}>
-            <HeroTitle>Find, buy, and sell NFTs from incredible artists on Solana.</HeroTitle>
-            <Pitch>
+            <HeroTitle>Create one-of-a-kind or limited edition NFTs on Solana.</HeroTitle>
+            {/* <Pitch>
               Our mission is to empower creators and collectors by building a suite of integrated
               tools to mint, discover, and sell NFTs on Solana.
-            </Pitch>
+            </Pitch> */}
             <Space direction="horizontal" size="large">
-              <Button size="large" onClick={() => connect()}>
+              {/* <Button size="large" onClick={() => connect()}>
                 Create Your Store
-              </Button>
+              </Button> */}
             </Space>
           </Marketing>
           {heroStorefront && (
@@ -103,7 +103,7 @@ export default function Home({ featuredStorefronts }: HomeProps) {
         </Section>
         <FeaturedStores justify="center">
           <Col>
-            <Title level={3}>Featured Creators</Title>
+            {/* <Title level={3}>Featured Creators</Title> */}
             <List
               grid={{ xs: 1, sm: 2, md: 3, lg: 3, xl: 3, xxl: 3, gutter: 16 }}
               dataSource={drop<StorefrontFeature>(1, featuredStorefronts)}
@@ -117,10 +117,10 @@ export default function Home({ featuredStorefronts }: HomeProps) {
         </FeaturedStores>
         <Section justify="center" align="middle">
           <Space direction="vertical" align="center">
-            <Title level={3}>Launch your own Solana NFT store today!</Title>
+            {/* <Title level={3}>Launch your own Solana NFT store today!</Title>
             <Button size="large" onClick={() => connect()}>
               Create Your Store
-            </Button>
+            </Button> */}
           </Space>
         </Section>
       </ContentCol>

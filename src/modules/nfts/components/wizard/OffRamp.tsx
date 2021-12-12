@@ -68,8 +68,7 @@ export default function OffRampScreen({
     : `You've minted ${0} NFTs`;
   const storefrontMintCopy = `${
     successfulMints > 1 ? 'They are' : 'It is'
-  } available in your wallet. Now you can
-  list ${successfulMints > 1 ? 'them' : 'it'} on your Holaplex store.`;
+  } available in your wallet.`;
 
   const noStorefrontCopy =
     'On your Holaplex store you’ll be able to list and sell your NFTs. Setting up a store only takes 5 min and is totally free!';
@@ -109,7 +108,7 @@ export default function OffRampScreen({
 
             {successfulMints ? (
               <>
-                {storefront ? (
+                {/* {storefront ? (
                   <Button
                     type="primary"
                     onClick={() => router.push(listingUrl)}
@@ -124,7 +123,7 @@ export default function OffRampScreen({
                   <Button type="primary" onClick={() => router.push('/storefront/new')}>
                     Create your Free Store
                   </Button>
-                )}
+                )} */}
               </>
             ) : (
               <Button
